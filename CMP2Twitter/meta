@@ -1,22 +1,11 @@
 {
-  "version": "1.1.0",
-  "m_version": "3.3.4.1200",
+  "version": "2.0.0",
+  "m_version": "3.4.0.527",
   "user": "shinhara@sitecore.net",
-  "source": "56e40fbd86da",
+  "source": "ff96a890e8e8",
   "options": {
     "items": [
-      "schema",
-      "option_lists",
-      "scripts",
-      "state_flows",
-      "taxonomies",
-      "triggers",
-      "export_profiles",
-      "policies",
-      "portal_pages",
-      "media_processing_sets",
-      "rendition_links",
-      "settings"
+      "triggers"
     ],
     "include_system_owned": false,
     "since": null
