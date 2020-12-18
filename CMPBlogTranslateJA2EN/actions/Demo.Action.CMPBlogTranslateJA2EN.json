@@ -16,17 +16,17 @@
         }
       },
       "Settings": {
-        "connectionString": "Endpoint=sb://contenthubjpdemo.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=e3GWCVON6X7NUqZAGqn1ZebA24Mt5ROPiSnCiHHcDec=",
+        "connectionString": "",
         "destination": "m_blogtranslate",
         "destinationType": "Topic",
         "headers": [
           {
             "key": "host_header",
-            "value": "demo33jp.stylelabs.io"
+            "value": ""
           },
           {
             "key": "token",
-            "value": "ce0f2ad8def44ec887926f29f8ad852e"
+            "value": ""
           }
         ],
         "values": []

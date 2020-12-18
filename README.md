@@ -2,6 +2,12 @@
 
 ## Sitecore Content Hub DAM デモ
 
+### JapaneseResource
+
+デモサイト向けのサンプルリソースファイルを提供しています。手順に関しては YouTube の動画で紹介を指定してます。
+
+* https://www.youtube.com/watch?v=6y30NHiGbiE
+
 ### TaxonomyAutoTranslateJa
 
 自動で生成されるタクソノミーは英語のみが追加されるため、自動で作成された段階で機械翻訳で日本語を設定するためのサンプルとなります。
