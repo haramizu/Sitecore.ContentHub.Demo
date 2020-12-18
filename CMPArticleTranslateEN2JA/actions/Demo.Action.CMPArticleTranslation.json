@@ -1,0 +1,97 @@
+{
+  "version": "1.1.0",
+  "data": {
+    "id": 14249,
+    "identifier": "Demo.Action.CMPArticleTranslation",
+    "cultures": [
+      "en-US",
+      "ja-JP"
+    ],
+    "properties": {
+      "Type": {
+        "identifier": "AzureServiceBus",
+        "labels": {
+          "en-US": "Azure Service Bus",
+          "ja-JP": "Azure Service Bus"
+        }
+      },
+      "Settings": {
+        "connectionString": "Endpoint=sb://contenthubjpdemo.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=e3GWCVON6X7NUqZAGqn1ZebA24Mt5ROPiSnCiHHcDec=",
+        "destination": "m_articletranslate",
+        "destinationType": "Topic",
+        "headers": [
+          {
+            "key": "host_header",
+            "value": "lighthousejp.stylelabs.io"
+          },
+          {
+            "key": "token",
+            "value": "62d97ce3b362494380a93f0c834dee7d"
+          }
+        ],
+        "values": []
+      },
+      "ActionExecutionScope": {
+        "identifier": "External",
+        "labels": {
+          "en-US": "External",
+          "ja-JP": "エクスターナル"
+        }
+      },
+      "ActionLabel": {},
+      "ActionName": "Demo - Article Translate Ja",
+      "DefinitionName": null,
+      "Defaults": null,
+      "PEG_DefinitionName": null
+    },
+    "relations": {
+      "ActionToScript": {
+        "children": []
+      },
+      "ActionToStateMachine": {
+        "children": []
+      },
+      "ActionToTemplate": {
+        "children": []
+      }
+    },
+    "created_by": {
+      "href": "9Pw9EZHd80e9mtPT4SFsaQ"
+    },
+    "created_on": "2020-07-24T06:02:03.9052425Z",
+    "modified_by": {
+      "href": "9Pw9EZHd80e9mtPT4SFsaQ"
+    },
+    "modified_on": "2020-07-24T06:24:06.6922538Z",
+    "entitydefinition": {
+      "href": "M.Action",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": false,
+    "is_path_root": false,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 4,
+    "self": {
+      "href": "Demo.Action.CMPArticleTranslation"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1.1.0",
+  "data": {
+    "id": 15321,
+    "identifier": "M.ContentType.Twitter",
+    "cultures": [
+      "en-US",
+      "ja-JP"
+    ],
+    "properties": {
+      "ContentType.Label": {
+        "en-US": "Twitter",
+        "ja-JP": "Twitter"
+      },
+      "ContentType.Prefix": "Twitter",
+      "Entity.Visualization": {
+        "icon": "m-icon-logo-twitter",
+        "color": "light-blue"
+      }
+    },
+    "relations": {},
+    "created_by": {
+      "href": "JmAMKfuyiUGw6VcjkRHNOw"
+    },
+    "created_on": "2020-07-09T02:02:06.2364201Z",
+    "modified_by": {
+      "href": "JmAMKfuyiUGw6VcjkRHNOw"
+    },
+    "modified_on": "2020-07-09T02:02:10.8698395Z",
+    "entitydefinition": {
+      "href": "M.ContentType",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": true,
+    "is_path_root": true,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 2,
+    "self": {
+      "href": "M.ContentType.Twitter"
+    }
+  }
+}

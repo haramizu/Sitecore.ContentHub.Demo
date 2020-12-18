@@ -1,0 +1,151 @@
+{
+  "version": "1.1.0",
+  "data": {
+    "id": 14252,
+    "identifier": "Demo.Trigger.CMPArticleTranslation",
+    "cultures": [],
+    "properties": {
+      "Name": "Demo - Article translate to Japanese",
+      "Description": null,
+      "IsEnabled": true,
+      "RuleSet": {
+        "version": "1.0",
+        "variables": {
+          "mcontent_localizationtocontentchild_added": {
+            "type": "entity_member",
+            "definition": "M.Content",
+            "member": "LocalizationToContent",
+            "role": "child",
+            "phase": "added"
+          },
+          "lookup_id_12550": {
+            "type": "entity_field_lookup",
+            "field": "id",
+            "by_identifier": "M.Localization.ja-JP"
+          },
+          "entity_definition_field": {
+            "type": "entity_definition_field",
+            "field": "name"
+          }
+        },
+        "condition": {
+          "version": "1.0",
+          "expression": {
+            "type": "and",
+            "children": [
+              {
+                "type": "?:",
+                "if": {
+                  "type": "function",
+                  "name": "isnumber",
+                  "children": [
+                    {
+                      "type": "variable",
+                      "name": "lookup_id_12550"
+                    }
+                  ]
+                },
+                "then": {
+                  "type": "contains",
+                  "first": {
+                    "type": "variable",
+                    "name": "mcontent_localizationtocontentchild_added"
+                  },
+                  "second": {
+                    "type": "variable",
+                    "name": "lookup_id_12550"
+                  }
+                },
+                "else": false
+              },
+              {
+                "type": "eq",
+                "first": {
+                  "type": "variable",
+                  "name": "entity_definition_field"
+                },
+                "second": "M.Content"
+              }
+            ]
+          }
+        }
+      },
+      "M.Trigger.Objective": [
+        {
+          "identifier": "EntityCreation",
+          "labels": {
+            "en-US": "Entity creation",
+            "ja-JP": "エンティティの作成"
+          }
+        }
+      ],
+      "M.Trigger.Type": {
+        "identifier": "OutOfProcess",
+        "labels": {
+          "en-US": "In background",
+          "ja-JP": "バックグラウンドで"
+        }
+      },
+      "EventMessage": null
+    },
+    "relations": {
+      "TriggerToAction": {
+        "children": [
+          {
+            "href": "Demo.Action.CMPArticleTranslation"
+          }
+        ]
+      },
+      "TriggerToPreAction": {
+        "children": []
+      },
+      "TriggerToSecurityPreAction": {
+        "children": []
+      },
+      "TriggerToValidationPreAction": {
+        "children": []
+      },
+      "TriggerToAuditPreAction": {
+        "children": []
+      }
+    },
+    "created_by": {
+      "href": "9Pw9EZHd80e9mtPT4SFsaQ"
+    },
+    "created_on": "2020-07-24T06:23:38.1414444Z",
+    "modified_by": {
+      "href": "9Pw9EZHd80e9mtPT4SFsaQ"
+    },
+    "modified_on": "2020-07-24T06:23:40.1939085Z",
+    "entitydefinition": {
+      "href": "M.Trigger",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": false,
+    "is_path_root": false,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 2,
+    "self": {
+      "href": "Demo.Trigger.CMPArticleTranslation"
+    }
+  }
+}

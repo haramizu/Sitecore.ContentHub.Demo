@@ -1,0 +1,99 @@
+{
+  "version": "1.1.0",
+  "data": {
+    "id": 14954,
+    "identifier": "Demo.Action.TaxonomyAutoTagJa",
+    "cultures": [
+      "en-US",
+      "ja-JP"
+    ],
+    "properties": {
+      "Type": {
+        "identifier": "AzureServiceBus",
+        "labels": {
+          "en-US": "Azure Service Bus",
+          "ja-JP": "Azure Service Bus"
+        }
+      },
+      "Settings": {
+        "connectionString": "Endpoint=sb://contenthubjpdemo.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=e3GWCVON6X7NUqZAGqn1ZebA24Mt5ROPiSnCiHHcDec=",
+        "destination": "m_trans",
+        "destinationType": "Topic",
+        "headers": [
+          {
+            "key": "token",
+            "value": "ce0f2ad8def44ec887926f29f8ad852e"
+          },
+          {
+            "key": "host_header",
+            "value": "demo33jp.stylelabs.io"
+          }
+        ],
+        "values": []
+      },
+      "ActionExecutionScope": {
+        "identifier": "External",
+        "labels": {
+          "en-US": "External",
+          "ja-JP": "エクスターナル"
+        }
+      },
+      "ActionLabel": {
+        "ja-JP": ""
+      },
+      "ActionName": "Demo - AutoTag",
+      "DefinitionName": null,
+      "Defaults": null,
+      "PEG_DefinitionName": null
+    },
+    "relations": {
+      "ActionToScript": {
+        "children": []
+      },
+      "ActionToStateMachine": {
+        "children": []
+      },
+      "ActionToTemplate": {
+        "children": []
+      }
+    },
+    "created_by": {
+      "href": "MKuQfuJoCkmKvFHYwWL_Lg"
+    },
+    "created_on": "2020-06-29T04:15:25.7651004Z",
+    "modified_by": {
+      "href": "MKuQfuJoCkmKvFHYwWL_Lg"
+    },
+    "modified_on": "2020-07-09T02:44:54.8368596Z",
+    "entitydefinition": {
+      "href": "M.Action",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": false,
+    "is_path_root": false,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 6,
+    "self": {
+      "href": "Demo.Action.TaxonomyAutoTagJa"
+    }
+  }
+}

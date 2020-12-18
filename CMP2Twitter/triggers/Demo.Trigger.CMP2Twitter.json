@@ -1,0 +1,193 @@
+{
+  "version": "1.1.0",
+  "data": {
+    "id": 14650,
+    "identifier": "Demo.Trigger.CMP2Twitter",
+    "cultures": [],
+    "properties": {
+      "Name": "Demo - CMP to Twitter",
+      "Description": null,
+      "IsEnabled": true,
+      "RuleSet": {
+        "version": "1.0",
+        "variables": {
+          "mcontent_contentlifecycletocontentchild_is": {
+            "type": "entity_member",
+            "definition": "M.Content",
+            "member": "ContentLifeCycleToContent",
+            "role": "child",
+            "phase": "is"
+          },
+          "lookup_id_9796": {
+            "type": "entity_field_lookup",
+            "field": "id",
+            "by_identifier": "M.ContentLifeCycle.Final"
+          },
+          "mcontent_contenttypetocontentchild_is": {
+            "type": "entity_member",
+            "definition": "M.Content",
+            "member": "ContentTypeToContent",
+            "role": "child",
+            "phase": "is"
+          },
+          "lookup_id_14648": {
+            "type": "entity_field_lookup",
+            "field": "id",
+            "by_identifier": "M.ContentType.Twitter"
+          },
+          "entity_definition_field": {
+            "type": "entity_definition_field",
+            "field": "name"
+          }
+        },
+        "condition": {
+          "version": "1.0",
+          "expression": {
+            "type": "and",
+            "children": [
+              {
+                "type": "and",
+                "children": [
+                  {
+                    "type": "?:",
+                    "if": {
+                      "type": "function",
+                      "name": "isnumber",
+                      "children": [
+                        {
+                          "type": "variable",
+                          "name": "lookup_id_9796"
+                        }
+                      ]
+                    },
+                    "then": {
+                      "type": "contains",
+                      "first": {
+                        "type": "variable",
+                        "name": "mcontent_contentlifecycletocontentchild_is"
+                      },
+                      "second": {
+                        "type": "variable",
+                        "name": "lookup_id_9796"
+                      }
+                    },
+                    "else": false
+                  },
+                  {
+                    "type": "?:",
+                    "if": {
+                      "type": "function",
+                      "name": "isnumber",
+                      "children": [
+                        {
+                          "type": "variable",
+                          "name": "lookup_id_14648"
+                        }
+                      ]
+                    },
+                    "then": {
+                      "type": "contains",
+                      "first": {
+                        "type": "variable",
+                        "name": "mcontent_contenttypetocontentchild_is"
+                      },
+                      "second": {
+                        "type": "variable",
+                        "name": "lookup_id_14648"
+                      }
+                    },
+                    "else": false
+                  }
+                ]
+              },
+              {
+                "type": "eq",
+                "first": {
+                  "type": "variable",
+                  "name": "entity_definition_field"
+                },
+                "second": "M.Content"
+              }
+            ]
+          }
+        }
+      },
+      "M.Trigger.Objective": [
+        {
+          "identifier": "EntityModification",
+          "labels": {
+            "en-US": "Entity modification",
+            "ja-JP": "エンティティの変更"
+          }
+        }
+      ],
+      "M.Trigger.Type": {
+        "identifier": "OutOfProcess",
+        "labels": {
+          "en-US": "In background",
+          "ja-JP": "バックグラウンドで"
+        }
+      },
+      "EventMessage": null
+    },
+    "relations": {
+      "TriggerToAction": {
+        "children": [
+          {
+            "href": "Demo.Action.CMP2Twitter"
+          }
+        ]
+      },
+      "TriggerToPreAction": {
+        "children": []
+      },
+      "TriggerToSecurityPreAction": {
+        "children": []
+      },
+      "TriggerToValidationPreAction": {
+        "children": []
+      },
+      "TriggerToAuditPreAction": {
+        "children": []
+      }
+    },
+    "created_by": {
+      "href": "zIctJcJZFUysYdXa-IVqtA"
+    },
+    "created_on": "2020-07-30T04:18:55.3593673Z",
+    "modified_by": {
+      "href": "zIctJcJZFUysYdXa-IVqtA"
+    },
+    "modified_on": "2020-07-30T04:21:08.3996133Z",
+    "entitydefinition": {
+      "href": "M.Trigger",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": false,
+    "is_path_root": false,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 2,
+    "self": {
+      "href": "Demo.Trigger.CMP2Twitter"
+    }
+  }
+}

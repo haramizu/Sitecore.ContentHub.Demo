@@ -1,0 +1,13 @@
+{
+  "version": "1.1.0",
+  "m_version": "3.3.4.1200",
+  "user": "shinhara@sitecore.net",
+  "source": "56e40fbd86da",
+  "options": {
+    "items": [
+      "triggers"
+    ],
+    "include_system_owned": false,
+    "since": null
+  }
+}

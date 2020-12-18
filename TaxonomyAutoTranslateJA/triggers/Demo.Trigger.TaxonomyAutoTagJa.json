@@ -1,0 +1,128 @@
+{
+  "version": "1.1.0",
+  "data": {
+    "id": 14961,
+    "identifier": "Demo.Trigger.TaxonomyAutoTagJa",
+    "cultures": [],
+    "properties": {
+      "Name": "Demo - AutoTag",
+      "Description": "When create auto-tag in taxonomy, this trigger send request of Machine Translation to Japanese",
+      "IsEnabled": true,
+      "RuleSet": {
+        "version": "1.0",
+        "variables": {
+          "mtag_autocreated_is_": {
+            "type": "entity_member",
+            "definition": "M.Tag",
+            "member": "AutoCreated",
+            "phase": "is"
+          },
+          "entity_definition_field": {
+            "type": "entity_definition_field",
+            "field": "name"
+          }
+        },
+        "condition": {
+          "version": "1.0",
+          "expression": {
+            "type": "and",
+            "children": [
+              {
+                "type": "==",
+                "first": {
+                  "type": "variable",
+                  "name": "mtag_autocreated_is_"
+                },
+                "second": true
+              },
+              {
+                "type": "eq",
+                "first": {
+                  "type": "variable",
+                  "name": "entity_definition_field"
+                },
+                "second": "M.Tag"
+              }
+            ]
+          }
+        }
+      },
+      "M.Trigger.Objective": [
+        {
+          "identifier": "EntityCreation",
+          "labels": {
+            "en-US": "Entity creation",
+            "ja-JP": "エンティティの作成"
+          }
+        }
+      ],
+      "M.Trigger.Type": {
+        "identifier": "OutOfProcess",
+        "labels": {
+          "en-US": "In background",
+          "ja-JP": "バックグラウンドで"
+        }
+      },
+      "EventMessage": null
+    },
+    "relations": {
+      "TriggerToAction": {
+        "children": [
+          {
+            "href": "Demo.Action.TaxonomyAutoTagJa"
+          }
+        ]
+      },
+      "TriggerToPreAction": {
+        "children": []
+      },
+      "TriggerToSecurityPreAction": {
+        "children": []
+      },
+      "TriggerToValidationPreAction": {
+        "children": []
+      },
+      "TriggerToAuditPreAction": {
+        "children": []
+      }
+    },
+    "created_by": {
+      "href": "MKuQfuJoCkmKvFHYwWL_Lg"
+    },
+    "created_on": "2020-06-29T04:17:57.3478524Z",
+    "modified_by": {
+      "href": "MKuQfuJoCkmKvFHYwWL_Lg"
+    },
+    "modified_on": "2020-07-09T02:45:53.5710226Z",
+    "entitydefinition": {
+      "href": "M.Trigger",
+      "title": "The entity definition for this entity"
+    },
+    "copy": {
+      "href": null
+    },
+    "permissions": {
+      "href": null
+    },
+    "lifecycle": {
+      "href": null
+    },
+    "saved_selections": {
+      "href": null
+    },
+    "roles": {
+      "href": null
+    },
+    "annotations": {
+      "href": null
+    },
+    "is_root_taxonomy_item": false,
+    "is_path_root": false,
+    "inherits_security": true,
+    "is_system_owned": false,
+    "version": 4,
+    "self": {
+      "href": "Demo.Trigger.TaxonomyAutoTagJa"
+    }
+  }
+}
